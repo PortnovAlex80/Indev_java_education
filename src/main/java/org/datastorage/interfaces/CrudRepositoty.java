@@ -7,4 +7,5 @@ public interface CrudRepositoty<T> {
   T getByIndex(int index);
   List<T> getAll();
   T sum();
+
 }
