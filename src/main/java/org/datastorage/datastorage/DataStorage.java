@@ -1,17 +1,17 @@
 package org.datastorage.datastorage;
 
-import org.datastorage.interfaces.CrudRepositoty;
+import org.datastorage.interfaces.CrudRepository;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
 
-public class DataStorage<T> implements CrudRepositoty<T> {
+public class DataStorage<T> implements CrudRepository<T> {
     private static final Logger LOGGER = Logger.getLogger(DataStorage.class.getName());
 
 
-    private List<T> storage = new ArrayList<T>();
+    private List<T> storage;
     private Integer sizeLimit; // Опциональное ограничение размера
 
     // Приватный конструктор, используемый билдером
