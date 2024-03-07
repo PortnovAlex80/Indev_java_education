@@ -8,7 +8,7 @@ public class Subject extends Entity {
 
     // Приватный конструктор
     private Subject(String subject, Double rating) {
-        if (subject == null || subject.length() <= 4 || subject.length() >= 50 || containsNumbersOrSymbols(subject)) {
+        if (subject == null || subject.length() <= 3 || subject.length() >= 50 || containsNumbersOrSymbols(subject)) {
             throw new IllegalArgumentException("Subject name must be between 5 and 49 characters and contain no numbers or special symbols.");
         }
         if (rating < 0.0 || rating > 5.0) {
